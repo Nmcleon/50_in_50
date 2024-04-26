@@ -1,8 +1,7 @@
-const search = document.querySelector(".search");
-const btn = document.querySelector(".btn");
-const input = document.querySelector(".input");
+const toggles = document.querySelectorAll('.faq-toggle');
 
-btn.addEventListener("click", () => {
-	search.classList.toggle('active')
-	input.focus()
-})
+toggles.forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+    toggle.parentNode.classList.toggle('active');
+  });
+});
