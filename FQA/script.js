@@ -1,11 +1,7 @@
-const labels = document.querySelectorAll('.form-conrol label');
+const toggles = document.querySelectorAll('.faq-toggle');
 
-labels.forEach(label => {
-  label.innerHTML = label.innerText
-    .split('')
-    .map(
-      (letter, idx) =>
-        `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
-    )
-    .join('');
+toggles.forEach((toggle) => {
+  toggle.addEventListener('click', () => {
+    toggle.parentNode.classList.toggle('active');
+  });
 });
