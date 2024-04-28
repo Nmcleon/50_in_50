@@ -1,11 +1,3 @@
-const labels = document.querySelectorAll('.form-conrol label');
-
-labels.forEach(label => {
-  label.innerHTML = label.innerText
-    .split('')
-    .map(
-      (letter, idx) =>
-        `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
-    )
-    .join('');
+document.getElementById('toggle').addEventListener('click', function () {
+  document.getElementById('nav').classList.toggle('active');
 });
